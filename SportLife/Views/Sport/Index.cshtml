@@ -1,0 +1,25 @@
+﻿
+@using SportLife.Models;
+
+@model IEnumerable<Sport>
+
+    <div style="font-family:Arial">
+        @{
+            ViewBag.Title = "Index";
+        }
+
+        <h2>Sport List</h2>
+        <ul>
+            @foreach (Sport Sport in @Model)
+            {
+                <li>
+                    @Html.ActionLink(Sport.Name, "Index", "Players", new { SportID = Sport.id }, null)
+                </li>
+            }
+            
+
+
+        </ul>
+ 
+
+    </div>
